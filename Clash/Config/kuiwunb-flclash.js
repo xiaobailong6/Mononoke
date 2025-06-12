@@ -384,7 +384,7 @@ const main = (config)  =>{
       "lazy": true,
       "include-all": true,
       "hidden": true,
-      "filter": "(?i)🇹🇭|太国|(\b(TH|Thailand)\b)",
+      "filter": "(?i)🇹🇭|泰国|(\b(TH|Thailand)\b)",
       "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Thailand.png"
     },
     {
