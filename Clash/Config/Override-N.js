@@ -168,15 +168,15 @@ function main(config) {
       "type": "select",
       "include-all": true,
       "proxies": ["Proxy", "HongKong", "TaiWan", "Japan", "Singapore", "America", "United Kingdom", "Korea","Germany", "Russia", "AllServer"],
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png"
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png"
     },
     {
       ...groupBaseOption,
-      "name": "X",
+      "name": "Twitter_X",
       "type": "select",
       "include-all": true,
       "proxies": ["Proxy", "HongKong", "TaiWan", "Japan", "Singapore", "America", "United Kingdom", "Korea","Germany", "Russia", "AllServer"],
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png"
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png"
     },
     {
       ...groupBaseOption,
