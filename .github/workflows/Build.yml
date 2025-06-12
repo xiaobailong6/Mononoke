@@ -1,24 +1,21 @@
 name: Build
-
 on:
   workflow_dispatch:
   schedule:
     - cron: "5 0,12 * * *"
-
 jobs:
   Build:
     runs-on: ubuntu-latest
     env:
       TZ: "Asia/Shanghai"
       SING_BOX_VERSION: 1.10.5
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4.2.2
       with:
+        # 修改为您的fork仓库
         repository: xiaobailong6/Mononoke
         path: Mononoke-repo
-
     - name: GeoIP
       run: |
         mkdir -p Mononoke/GeoIP
@@ -29,6 +26,10 @@ jobs:
       run: |
         #!/bin/bash
         repo_name=$(basename "$GITHUB_REPOSITORY")
+        if [[ "$SING_BOX_VERSION" == "xx" ]]; then
+            SING_BOX_VERSION="1.10.5"
+            echo "Detected SING_BOX_VERSION is xx, default to 1.10.5"
+        fi
         if [[ "$repo_name" == "Mononoke" ]]; then
             echo "Running in Mononoke repository"
             mkdir -p Mononoke-repo/Ruleset
@@ -201,7 +202,7 @@ jobs:
             done
             echo "Files downloaded successfully."
         else
-            echo "Unknown repository. Please run this script in either Mononoke or Mononoke repository."
+            echo "Unknown repository. Please run this script in Mononoke or Mononoke repository."
             exit 1
         fi
 
