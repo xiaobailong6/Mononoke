@@ -1,7 +1,7 @@
 // 参考 Verge Rev 示例 Script 配置
 //
 // Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 1.5.10)
-//https://raw.githubusercontent.com/Coldvvater/Mononoke/refs/heads/master/Clash/Config/Override.js
+// https://raw.githubusercontent.com/xiaobailong6/Mononoke/refs/heads/master/Clash/Config/Override-N.js
 // 最后更新时间: 2025-05-01 22:37
 
 // 规则集通用配置
