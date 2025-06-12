@@ -16,7 +16,7 @@ const groupBaseOption = {
 };
 
 // 程序入口
-const main = (config)  =>{
+function main(config) {
   const proxyCount = config?.proxies?.length ?? 0;
   const proxyProviderCount =
     typeof config?.["proxy-providers"] === "object" ? Object.keys(config["proxy-providers"]).length : 0;
