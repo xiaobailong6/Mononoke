@@ -183,7 +183,7 @@ function main(config) {
       "name": "Apple",
       "type": "select",
       "proxies": ["Proxy", "HongKong", "TaiWan", "Japan", "Singapore", "America", "United Kingdom", "Korea","Germany", "Russia", "AllServer", "DIRECT"],
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png"
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png"
     },
     {
       ...groupBaseOption,
