@@ -1,8 +1,8 @@
 // 参考 Verge Rev 示例 Script 配置
 //
 // Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 1.5.10)
-// https://raw.githubusercontent.com/xiaobailong6/Mononoke/refs/heads/master/Clash/Config/mihomo.js
-// 最后更新时间: 2025-06-13 15:25
+// https://raw.githubusercontent.com/xiaobailong6/Mononoke/refs/heads/master/Clash/Config/mihomo-fz.js
+// 最后更新时间: 2025-06-13 15:30
 
 // 规则集通用配置
 const ruleProviderCommon = {
@@ -85,27 +85,22 @@ function main(config) {
 
   // 覆盖策略组
   config["proxy-groups"] = [
-    // 地区分组
+    //总调整策略组
     {
       ...groupBaseOption,
-      "name": "AllServer",
+      "name": "Final",
       "type": "select",
-      "proxies": ["All-Auto"],
-      "include-all": true,
-      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
+      "proxies": ["Proxy", "DIRECT"],
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"
     },
     {
       ...groupBaseOption,
-      "name": "All-Auto",
-      "type": "url-test",
-      "tolerance": 50,
-      "lazy": true,
-      "include-all": true,
-      "hidden": true,
-      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
+      "name": "Proxy",
+      "type": "select",
+      "proxies": ["HongKong", "TaiWan", "Japan", "Singapore", "America", "United Kingdom", "Korea","Germany", "France", "Russia", "AllServer", "DIRECT"],
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png"
     },
+    // 地区分组
     {
       ...groupBaseOption,
       "name": "HongKong",
@@ -506,20 +501,28 @@ function main(config) {
       "filter": "(?i)ru|俄罗斯|莫斯科|圣彼得堡|(\b(Ru|Russia)\b)",
       "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png"
     },
-    {
+        {
       ...groupBaseOption,
-      "name": "Final",
+      "name": "AllServer",
       "type": "select",
-      "proxies": ["Proxy", "DIRECT"],
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png"
+      "proxies": ["All-Auto"],
+      "include-all": true,
+      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
     },
     {
       ...groupBaseOption,
-      "name": "Proxy",
-      "type": "select",
-      "proxies": ["HongKong", "TaiWan", "Japan", "Singapore", "America", "United Kingdom", "Korea","Germany", "France", "Russia", "AllServer", "DIRECT"],
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png"
+      "name": "All-Auto",
+      "type": "url-test",
+      "tolerance": 50,
+      "lazy": true,
+      "include-all": true,
+      "hidden": true,
+      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
     },
+
+    //策略组
     {
       ...groupBaseOption,
       "name": "AI",
