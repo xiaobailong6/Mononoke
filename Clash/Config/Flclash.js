@@ -209,6 +209,26 @@ const main = (config)  =>{
     // 地区分组
     {
       ...groupBaseOption,
+      "name": "AllServer",
+      "type": "select",
+      "proxies": ["All-Auto"],
+      "include-all": true,
+      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "All-Auto",
+      "type": "url-test",
+      "tolerance": 50,
+      "lazy": true,
+      "include-all": true,
+      "hidden": true,
+      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
+    },
+    {
+      ...groupBaseOption,
       "name": "HongKong",
       "type": "select",
       "proxies": ["HK-Auto", "HK-FallBack", "HK-LoadBalance"],
@@ -606,26 +626,6 @@ const main = (config)  =>{
       "hidden": true,
       "filter": "(?i)ru|俄罗斯|莫斯科|圣彼得堡|(\b(Ru|Russia)\b)",
       "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "AllServer",
-      "type": "select",
-      "proxies": ["All-Auto"],
-      "include-all": true,
-      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
-    },
-    {
-      ...groupBaseOption,
-      "name": "All-Auto",
-      "type": "url-test",
-      "tolerance": 50,
-      "lazy": true,
-      "include-all": true,
-      "hidden": true,
-      "filter": "(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png"
     }
   ];
 
